@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { toRuDate } from "@/lib/date";
 import { getAllNews, getNewsBySlug } from "@/lib/news";
+import { Footer } from "@/components/Footer";
 import styles from "./page.module.scss";
 
 type NewsPageProps = {
@@ -54,11 +55,7 @@ export default async function NewsPage({ params }: NewsPageProps) {
           ))}
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <Image src="/logo.svg" alt="500 на 700" width={70} height={84} />
-        <p>КРЕАТИВНОЕ АГЕНТСТВО 500NA700</p>
-      </footer>
+      <Footer text="КРЕАТИВНОЕ АГЕНТСТВО 500NA700" logoAlt="500 на 700" />
     </main>
   );
 }

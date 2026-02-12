@@ -42,7 +42,21 @@
   input {
     width: 12px;
     height: 12px;
-    accent-color: #fb8627;
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background:
+      linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) border-box;
+    cursor: pointer;
+  }
+
+  input:checked {
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.2 6.2 4.8 8.8 9.8 3.8' fill='none' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        center/100% 100% no-repeat,
+      linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) padding-box,
+      linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) border-box;
   }
 
   span {
@@ -63,17 +77,61 @@
 .form button {
   margin-top: 8px;
   width: fit-content;
-  border: 1px solid #0f0f17;
+  border: 1px solid transparent;
   border-radius: 18px;
   height: 31px;
   padding: 0 18px;
   font: 500 12px/1 var(--font-main), sans-serif;
   color: #0f0f17;
-  background: #fff;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) border-box;
   cursor: pointer;
 }
 
 .form button:hover {
-  border-color: transparent;
-  background: linear-gradient(180deg, #fb8627 0%, #f5bef6 100%);
+  background:
+    linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) padding-box,
+    linear-gradient(180deg, #fb8627 0%, #f5bef6 100%) border-box;
+}
+
+@media (max-width: 767px) {
+  .form {
+    gap: 10px;
+  }
+
+  .field {
+    input {
+      height: 52px;
+      border-radius: 12px;
+      padding: 0 14px;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+
+  .checkboxLine {
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 4px;
+
+    input {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 1.15;
+    }
+  }
+
+  .form button {
+    margin-top: 12px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
 }
