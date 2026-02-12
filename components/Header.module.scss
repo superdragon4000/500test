@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: #0f0f17;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.inner {
+  max-width: 1168px;
+  height: 112px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    height: 52px;
+    padding: 0 8px;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 34px;
+  }
+}

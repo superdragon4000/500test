@@ -1,0 +1,42 @@
+:root {
+  --color-bg: #0f0f17;
+  --color-text: #ffffff;
+  --color-muted: #8e8f99;
+  --color-line: #2f313a;
+  --header-height: 112px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main), sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: var(--header-height);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 52px;
+  }
+}
